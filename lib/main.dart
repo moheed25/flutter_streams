@@ -21,6 +21,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     dataStream = streamController.stream.asBroadcastStream();
+    
     super.initState();
   }
 
@@ -29,7 +30,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: Text('Streams in Flutter'),
+        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
